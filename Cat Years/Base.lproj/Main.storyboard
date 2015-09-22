@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cat_Years" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Age In Cat Years!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-rT-M0d">
+                                <rect key="frame" x="215" y="28" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-Un-vAP">
+                                <rect key="frame" x="215" y="57" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xef-GQ-KYS">
+                                <rect key="frame" x="260" y="95" width="80" height="30"/>
+                                <state key="normal" title="Press Here!"/>
+                                <connections>
+                                    <action selector="pressHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ldo-f8-oWm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Z0G-Ei-wdX">
+                                <rect key="frame" x="180" y="173" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z0G-Ei-wdX" firstAttribute="top" secondItem="xef-GQ-KYS" secondAttribute="bottom" constant="48" id="IjF-ty-Wfm"/>
+                            <constraint firstItem="eQK-Un-vAP" firstAttribute="width" secondItem="t4j-rT-M0d" secondAttribute="width" id="ONv-4f-7XW"/>
+                            <constraint firstItem="eQK-Un-vAP" firstAttribute="centerX" secondItem="t4j-rT-M0d" secondAttribute="centerX" id="Ovl-b4-61m"/>
+                            <constraint firstItem="t4j-rT-M0d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RDL-4C-7hB"/>
+                            <constraint firstItem="xef-GQ-KYS" firstAttribute="top" secondItem="eQK-Un-vAP" secondAttribute="bottom" constant="8" id="Sls-Vg-B7u"/>
+                            <constraint firstItem="Z0G-Ei-wdX" firstAttribute="centerX" secondItem="xef-GQ-KYS" secondAttribute="centerX" id="btt-g8-I0A"/>
+                            <constraint firstItem="eQK-Un-vAP" firstAttribute="top" secondItem="t4j-rT-M0d" secondAttribute="bottom" constant="8" id="ilZ-RK-dvW"/>
+                            <constraint firstItem="eQK-Un-vAP" firstAttribute="top" secondItem="t4j-rT-M0d" secondAttribute="bottom" constant="8" id="lxU-bK-tIz"/>
+                            <constraint firstItem="t4j-rT-M0d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oQL-7t-v6p"/>
+                            <constraint firstItem="t4j-rT-M0d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s6a-jq-nni"/>
+                            <constraint firstItem="xef-GQ-KYS" firstAttribute="centerX" secondItem="eQK-Un-vAP" secondAttribute="centerX" id="uqj-RV-45d"/>
+                            <constraint firstItem="eQK-Un-vAP" firstAttribute="centerX" secondItem="t4j-rT-M0d" secondAttribute="centerX" id="zMu-gd-pTb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catYears" destination="t4j-rT-M0d" id="0Cb-zO-CFe"/>
+                        <outlet property="catYearsField" destination="eQK-Un-vAP" id="6G4-8T-fBz"/>
+                        <outlet property="image" destination="Z0G-Ei-wdX" id="e10-Iy-F1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat.jpeg" width="224" height="225"/>
+    </resources>
+</document>
